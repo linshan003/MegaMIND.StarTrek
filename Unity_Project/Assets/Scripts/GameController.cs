@@ -40,7 +40,7 @@ public class GameController : MonoBehaviour
 				Application.LoadLevel (Application.loadedLevel);
 			   }
 		}
-		timeNow = Mathf.RoundToInt (Time.time);
+		timeNow = Mathf.RoundToInt (Time.timeSinceLevelLoad);
 	//	result = s.ToString ("#0.00");
 		timeText.text = "Time: " + timeNow;
 
@@ -54,7 +54,7 @@ public class GameController : MonoBehaviour
 									Vector3 spawnPosition = new Vector3 (Random.Range (-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
 									Quaternion spawnRotation = Quaternion.identity; 
 									Instantiate (hazard, spawnPosition, spawnRotation);
-									yield return new WaitForSeconds (spawnWait  / (Time.time/5 + 1));
+				yield return new WaitForSeconds (spawnWait  / (Time.timeSinceLevelLoad/5 + 1));
 							}
 			yield return new WaitForSeconds(waveWait);
 			if(gameOver)
