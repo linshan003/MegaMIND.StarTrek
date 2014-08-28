@@ -2964,7 +2964,7 @@ MonoBehaviour:
   - {fileID: 100000, guid: 498a04fac3d2e4c90914b977bec853d6, type: 2}
   spawnValues: {x: 6, y: 0, z: 16}
   hazardCount: 10
-  spawnWait: .5
+  spawnWait: 1
   startWait: 2
   waveWait: 1
   scoreText: {fileID: 1246170540}
