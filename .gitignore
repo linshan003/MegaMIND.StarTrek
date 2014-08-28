@@ -11,6 +11,17 @@
 /*.userprefs
 /*.pidb
 /*.booproj
+ExportedObj/
+obj/
+*.svd
+*.userprefs
+/*.csproj
+*.pidb
+*.suo
+/*.sln
+*.user
+*.unityproj
+*.booproj
 
 # =========================
 # Operating System Files
@@ -24,7 +35,8 @@
 .LSOverride
 
 # Icon must ends with two \r.
-Icon
+Icon
+
 
 # Thumbnails
 ._*
