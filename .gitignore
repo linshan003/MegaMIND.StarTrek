@@ -63,4 +63,4 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
-Unity_Project/*.txt
+Unity_Project\*.txt
