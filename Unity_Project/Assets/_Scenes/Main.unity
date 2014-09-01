@@ -111,7 +111,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d9808401c68af274a8edfbed3d1b53c7, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d9808401c68af274a8edfbed3d1b53c7, type: 3}
       propertyPath: m_Name
@@ -3015,7 +3015,7 @@ MonoBehaviour:
   - {fileID: 100000, guid: 498a04fac3d2e4c90914b977bec853d6, type: 2}
   spawnValues: {x: 6, y: 0, z: 16}
   hazardCount: 10
-  spawnWait: 3
+  spawnWait: 5
   startWait: 2
   waveWait: .100000001
   scoreText: {fileID: 1246170540}
@@ -3043,7 +3043,7 @@ AudioSource:
   m_GameObject: {fileID: 1060628116}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 383da566e66f2c141af6138166c93564, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7b04c59dd84f14039b601e1abbe7b884, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -4543,14 +4543,14 @@ GUIText:
   m_Enabled: 1
   serializedVersion: 3
   m_Text: Game Over Text
-  m_Anchor: 4
+  m_Anchor: 1
   m_Alignment: 1
   m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 1
   m_TabSize: 4
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   m_Material: {fileID: 0}
-  m_FontSize: 22
+  m_FontSize: 58
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -4625,7 +4625,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9930946b7c5f48e44aef1e56c2de7315, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9930946b7c5f48e44aef1e56c2de7315, type: 2}
@@ -6065,7 +6065,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: bf75b984df8a84987bcf3a8bf6e2862d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: .00999999978
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0

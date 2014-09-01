@@ -81,7 +81,8 @@ public class GameController : MonoBehaviour
 
 	public void GameOver()
 	{
-		gameOverText.text = "Game Over!!!!!!\r\nYou Have Defeated By 'BO XIE' DAMOWANG!";
+		gameOverText.text = "Game Over ";
+			//"\r\nYou Have Defeated By 'BO XIE' DAMOWANG!";
 		gameOver = true;
 	}
 

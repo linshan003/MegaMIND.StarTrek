@@ -17,12 +17,20 @@ public class PlayerController : MonoBehaviour {
 	public GameObject shot;
 	public Transform shotSpawn;
 	public float fireRate;
+
 	private float nextFire;
+	private float weaponLevel;
+
+	void Start()
+	{
+		weaponLevel = 1;
+	}
 
 	void Update()
 	{
-		if ((Input.GetKey ("space")||Input.GetButton ("Fire1")) && Time.time > nextFire) {
-			nextFire = Time.time + fireRate ;
+		if ((Input.GetKey ("space")||Input.GetButton ("Fire1")) && Time.time > nextFire)
+		{
+			nextFire = Time.time + fireRate/weaponLevel  ;
 			Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
 			audio.Play ();
 		}

@@ -175,7 +175,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 1be4472894949437694aead55c6da60f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: .00999999978
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -250,6 +250,7 @@ MonoBehaviour:
   playerExplosion: {fileID: 100008, guid: a93496017806b7740910df5fd946f306, type: 2}
   scoreValue: 20
   gameController: {fileID: 0}
+  health: 1
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
