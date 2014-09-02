@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour {
 	public Boundary boundary;
 
 	public GameObject shot;
-	public Transform shotSpawn;
+	public Transform shotSpawn, shotSpawnC;
 	public float fireRate;
 
 	private float nextFire;
@@ -28,10 +28,11 @@ public class PlayerController : MonoBehaviour {
 
 	void Update()
 	{
-		if ((Input.GetKey ("space")||Input.GetButton ("Fire1")) && Time.time > nextFire)
+		if ((Input.GetKey ("space")||Input.GetButton ("Fire1")) || Time.time > nextFire)
 		{
 			nextFire = Time.time + fireRate/weaponLevel  ;
 			Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+			Instantiate(shot, shotSpawnC.position, shotSpawnC.rotation);
 			audio.Play ();
 		}
 	}
@@ -40,9 +41,16 @@ public class PlayerController : MonoBehaviour {
 	{
 		float moveHorizontal = Input.GetAxis ("Horizontal");
 		float moveVertical = Input.GetAxis ("Vertical");
-
 		Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
 		rigidbody.velocity = movement * speed; 
+
+
+		// Input in android pad.
+		if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved) {
+			Vector2 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
+			transform.Translate(-touchDeltaPosition.x * speed, 0.0f,  -touchDeltaPosition.y * speed);
+		}
+
 
 		rigidbody.position = new Vector3 (
 			Mathf.Clamp (rigidbody.position.x, boundary.Xmin, boundary.Xmax),
