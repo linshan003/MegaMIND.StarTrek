@@ -4,6 +4,7 @@ using System.Collections;
 public class GameController : MonoBehaviour 
 {
 	public GameObject[] hazards;
+	public GameObject reward ;
 	public Vector3 spawnValues;
 	public int hazardCount;
 	public float spawnWait;
@@ -55,11 +56,13 @@ public class GameController : MonoBehaviour
 									Quaternion spawnRotation = Quaternion.identity; 
 									Instantiate (hazard, spawnPosition, spawnRotation);
 				yield return new WaitForSeconds (spawnWait  / (Time.timeSinceLevelLoad/5 + 1));
-							}
+						  }
+			Instantiate(reward, new Vector3 (Random.Range (-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z),Quaternion.identity );
 			yield return new WaitForSeconds(waveWait);
 			if(gameOver)
 			{
 				restartText.text = " Press 'R' for another game. ";
+				//
 				restart = true ;
 				break;
 			}

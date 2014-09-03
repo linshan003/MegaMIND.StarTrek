@@ -15,24 +15,37 @@ public class PlayerController : MonoBehaviour {
 	public Boundary boundary;
 
 	public GameObject shot;
-	public Transform shotSpawn, shotSpawnC;
+	public Transform shotSpawnL, shotSpawnR;
 	public float fireRate;
 
 	private float nextFire;
 	private float weaponLevel;
+	private float delta ;
 
 	void Start()
 	{
 		weaponLevel = 1;
+	    delta = shotSpawnR.position.x - shotSpawnL.position.x ;
+
+	}
+	public void LevelUp()
+	{
+		weaponLevel += 1;
 	}
 
 	void Update()
 	{
-		if ((Input.GetKey ("space")||Input.GetButton ("Fire1")) || Time.time > nextFire)
+		if ((Input.GetKey ("space")||Input.GetButton ("Fire1")) && Time.time > nextFire)
 		{
-			nextFire = Time.time + fireRate/weaponLevel  ;
-			Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
-			Instantiate(shot, shotSpawnC.position, shotSpawnC.rotation);
+			nextFire = Time.time + fireRate/(1 + weaponLevel/10) ;
+
+			for( int i = 0 ; i <= weaponLevel ; i++)
+			{
+				Instantiate(shot, new Vector3(shotSpawnL.position.x + i * delta / weaponLevel, 0.0f, shotSpawnL.position.z),shotSpawnL.rotation );
+			}
+
+		//	Instantiate(shot, shotSpawnL.position, shotSpawnR.rotation);
+		//	Instantiate(shot, shotSpawnR.position, shotSpawnR.rotation);
 			audio.Play ();
 		}
 	}
