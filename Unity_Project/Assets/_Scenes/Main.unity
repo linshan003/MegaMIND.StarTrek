@@ -3051,6 +3051,7 @@ MonoBehaviour:
   hazards:
   - {fileID: 100002, guid: e8585341384bd435bb4e23f41f20eae3, type: 2}
   - {fileID: 100002, guid: 8e47d42326d49466ba6e5136732a37b3, type: 2}
+  - {fileID: 100002, guid: 26e4324653019457ca5b2f49d80e1986, type: 2}
   - {fileID: 100000, guid: 498a04fac3d2e4c90914b977bec853d6, type: 2}
   reward: {fileID: 100000, guid: 8ec3f6ba2bace4243b34f30a9f17175e, type: 2}
   spawnValues: {x: 6, y: 0, z: 16}

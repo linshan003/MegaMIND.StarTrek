@@ -41,7 +41,12 @@ public class PlayerController : MonoBehaviour {
 
 			for( int i = 0 ; i <= weaponLevel ; i++)
 			{
-				Instantiate(shot, new Vector3(shotSpawnL.position.x + i * delta / weaponLevel, 0.0f, shotSpawnL.position.z),shotSpawnL.rotation );
+				Instantiate(shot, new Vector3(shotSpawnL.position.x + i * delta / weaponLevel, 
+				                              0.0f, 
+				                              shotSpawnL.position.z),
+				        /* diverse shotting */    Quaternion.Euler (0.0f, 100 * (i - weaponLevel/2) * delta / weaponLevel,0.0f)
+				         //   shotSpawnL.rotation
+				            );
 			}
 
 		//	Instantiate(shot, shotSpawnL.position, shotSpawnR.rotation);
