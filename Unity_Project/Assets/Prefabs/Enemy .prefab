@@ -174,7 +174,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 1be4472894949437694aead55c6da60f, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -249,7 +249,6 @@ MonoBehaviour:
   explosion: {fileID: 100012, guid: 384371afbb4354cc9a3fc68eab303756, type: 2}
   playerExplosion: {fileID: 100008, guid: a93496017806b7740910df5fd946f306, type: 2}
   scoreValue: 20
-  gameController: {fileID: 0}
   health: 1
 --- !u!114 &11400004
 MonoBehaviour:
@@ -280,7 +279,7 @@ MonoBehaviour:
   boundary:
     Xmin: -6
     Xmax: 6
-    Zmin: -10
+    Zmin: -30
     Zmax: 20
   tilt: 10
   dodge: 7

@@ -6,8 +6,8 @@ public class DistroyByContact : MonoBehaviour {
 	public GameObject explosion;
 	public GameObject playerExplosion;
 	public int scoreValue;
-	public GameController gameController;
 
+	private GameController gameController;
 	public int health;
 	private int shootCount ;
 
